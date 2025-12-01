@@ -1,0 +1,38 @@
+# Gemini Vertex AI Configuration
+gemini:
+  project_id: "your-project-id"
+  location: "us-central1"
+  model: "gemini-2.5-flash"
+  max_tokens: 2048
+  temperature: 0.7
+
+# Data Processing Configuration
+data_processing:
+  supported_formats: ["image", "text", "docx", "xlsx", "pdf", "csv"]
+  max_file_size_mb: 50
+  chunk_size: 1000
+  
+# Prompts Configuration
+prompts:
+  image_analysis:
+    default: "Analyze this image and provide a detailed description of what you see."
+    custom: "Focus on {aspect} in this image and provide detailed analysis."
+  
+  document_summary:
+    default: "Summarize this document in a concise manner."
+    detailed: "Provide a comprehensive summary of this document including key points and conclusions."
+  
+  spreadsheet_analysis:
+    default: "Analyze this spreadsheet data and provide insights."
+    trends: "Identify trends and patterns in this data."
+  
+  text_processing:
+    default: "Process this text and extract key information."
+    sentiment: "Analyze the sentiment and tone of this text."
+
+# Output Configuration
+output:
+  format: "json"  # json, text, structured
+  include_metadata: true
+  save_results: true
+  output_directory: "./results"
