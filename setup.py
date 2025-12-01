@@ -1,0 +1,19 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="gemini-vertexai-processor",
+    version="1.0.0",
+    description="Multi-format data processor for Gemini Vertex AI",
+    packages=find_packages(),
+    install_requires=[
+        "google-genai>=0.3.0",
+        "Pillow>=9.0.0",
+        "pandas>=1.5.0",
+        "PyYAML>=6.0",
+        "python-docx>=0.8.11",
+        "PyPDF2>=2.0.0",
+        "openpyxl>=3.0.0",
+        "requests>=2.28.0",
+    ],
+    python_requires=">=3.8",
+)
